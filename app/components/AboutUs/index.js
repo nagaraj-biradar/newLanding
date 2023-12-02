@@ -48,7 +48,7 @@ const right = () => {
       height: "400px!important",
     },
     [theme.breakpoints.down("xl")]: {
-      height: "320px!important",
+      height: "360px!important",
     },
     [theme.breakpoints.down("lg")]: {
       height: "320px!important",
