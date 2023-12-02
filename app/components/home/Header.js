@@ -9,7 +9,7 @@ import Image from "next/image";
 const Header = () => {
   const StyledImage = styled(Image)(({ theme }) => ({
     [theme.breakpoints.up("md")]: {
-      height: "480px",
+      height: "580px",
     },
     [theme.breakpoints.down("md")]: {
       height: "380px",
@@ -28,7 +28,7 @@ const Header = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            mt: { xs: 2, sm: 6 },
+            mt: { xs: 2, sm: 4 },
           }}
         >
           <Image src={logo} alt={"logo"} height={90} />
