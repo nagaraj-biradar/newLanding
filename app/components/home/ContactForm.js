@@ -16,11 +16,11 @@ import icon1 from "../../assets/icon1.png";
 const ContactForm = () => {
   const StyledImage = styled(Image)(({ theme }) => ({
     [theme.breakpoints.up("xl")]: {
-      height: "500px !important",
+      height: "550px !important",
       objectFit: "contain",
     },
     [theme.breakpoints.down("xl")]: {
-      height: "500px !important",
+      height: "550px !important",
     },
     [theme.breakpoints.down("lg")]: {
       height: "450px !important",
@@ -43,7 +43,7 @@ const ContactForm = () => {
           width: "100%",
           boxShadow: "1px 1px 30px rgba(0, 0, 0, 0.3)",
           borderRadius: "20px",
-          mt: { xs: 6, sm: 7, md: 10 },
+          mt: { xs: 6, sm: 7, md: 18 },
           flexDirection: { xs: "column", md: "row" },
           position: "relative",
           px: { xs: 1, sm: 3, md: 6 },
