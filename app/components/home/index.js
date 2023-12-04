@@ -12,7 +12,7 @@ import OurBlog from "../../components/OurBlog";
 const index = () => {
   return (
     <>
-      <Box pt={{ xs: 4 }}>
+      <Box pt={{ xs: 2, sm: 4 }}>
         <Container
           maxWidth={"xl"}
           sx={{

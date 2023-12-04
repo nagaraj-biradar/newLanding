@@ -10,9 +10,11 @@ import {
   useMediaQuery,
   styled,
 } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 const BlogItem = ({ img, title, content }) => {
   const theme = useTheme();
+  const navigate = useRouter();
   const isDesktop = useMediaQuery(theme.breakpoints.up("lg"), {
     defaultMatches: true,
   });
@@ -38,7 +40,10 @@ const BlogItem = ({ img, title, content }) => {
 
   return (
     <>
-      <Box pr={{ lg: 3 }}>
+      <Box
+        pr={{ lg: 3 }}
+        onClick={() => navigate.push("https://blog.umego.io/")}
+      >
         <Stack sx={{ flexDirection: "row", gap: { xs: 2, sm: 3 } }}>
           <Box>
             <StyledImage src={img} alt={"blog"} />

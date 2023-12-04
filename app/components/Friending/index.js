@@ -53,12 +53,12 @@ const Frinding = () => {
               display: "flex",
               backgroundColor: "#fff",
               boxShadow: "1px 1px 30px rgba(0, 0, 0, 0.3)",
-              width: { xs: "150px", sm: "300px" },
+              width: { xs: "120px", sm: "300px" },
               overflow: "hidden",
               boxSizing: "content-box",
-              padding: { xs: "8px", sm: "10px", md: "14px" },
+              padding: { xs: "4px 8px", sm: "10px", md: "14px" },
               borderRadius: "20px",
-              gap: 1,
+              gap: { xs: 0.5, sm: 1 },
               position: "absolute",
               top: "50%",
               left: "0",
@@ -69,14 +69,15 @@ const Frinding = () => {
               sx={{
                 color: "#4245E4",
                 mt: 0.4,
+                fontSize: { xs: "18px", sm: "20px", md: "24px" },
               }}
             />
             <Typography
               variant="h6"
               component="div"
-              letterSpacing={1.2}
+              letterSpacing={{ sm: 1.2 }}
               sx={{
-                fontSize: { xs: "14px", sm: "18px", md: "20px" },
+                fontSize: { xs: "12px", sm: "18px", md: "20px" },
                 wordBreak: "break-all",
               }}
             >
@@ -89,12 +90,12 @@ const Frinding = () => {
               display: "flex",
               backgroundColor: "#fff",
               boxShadow: "1px 1px 30px rgba(0, 0, 0, 0.3)",
-              width: { xs: "150px", sm: "300px" },
+              width: { xs: "120px", sm: "300px" },
               overflow: "hidden",
               boxSizing: "content-box",
-              padding: { xs: "8px", sm: "10px", md: "14px" },
+              padding: { xs: "4px 8px", sm: "10px", md: "14px" },
               borderRadius: "20px",
-              gap: 1,
+              gap: { xs: 0.5, sm: 1 },
               position: "absolute",
               top: "0",
               right: { xs: 0, md: "60px", lg: "120px" },
@@ -104,14 +105,15 @@ const Frinding = () => {
               sx={{
                 color: "#4245E4",
                 mt: 0.4,
+                fontSize: { xs: "18px", sm: "20px", md: "24px" },
               }}
             />
             <Typography
               variant="h6"
               component="div"
-              letterSpacing={1.2}
+              letterSpacing={{ sm: 1.2 }}
               sx={{
-                fontSize: { xs: "14px", sm: "18px", md: "20px" },
+                fontSize: { xs: "12px", sm: "18px", md: "20px" },
                 wordBreak: "break-all",
               }}
             >
@@ -124,12 +126,12 @@ const Frinding = () => {
               display: "flex",
               backgroundColor: "#fff",
               boxShadow: "1px 1px 30px rgba(0, 0, 0, 0.3)",
-              width: { xs: "150px", sm: "300px" },
+              width: { xs: "120px", sm: "300px" },
               overflow: "hidden",
               boxSizing: "content-box",
-              padding: { xs: "8px", sm: "10px", md: "14px" },
+              padding: { xs: "4px 8px", sm: "10px", md: "14px" },
               borderRadius: "20px",
-              gap: 1,
+              gap: { xs: 0.5, sm: 1 },
               position: "absolute",
               bottom: "0",
               right: { xs: 0, md: "60px", lg: "120px" },
@@ -139,14 +141,15 @@ const Frinding = () => {
               sx={{
                 color: "#4245E4",
                 mt: 0.4,
+                fontSize: { xs: "18px", sm: "20px", md: "24px" },
               }}
             />
             <Typography
               variant="h6"
               component="div"
-              letterSpacing={1.2}
+              letterSpacing={{ sm: 1.2 }}
               sx={{
-                fontSize: { xs: "14px", sm: "18px", md: "20px" },
+                fontSize: { xs: "12px", sm: "18px", md: "20px" },
                 wordBreak: "break-all",
               }}
             >

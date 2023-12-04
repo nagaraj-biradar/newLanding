@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   styled,
@@ -15,6 +15,7 @@ import Image from "next/image";
 
 const Header = () => {
   const theme = useTheme();
+  const [isClient, setIsClient] = useState(false);
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"), {
     defaultMatches: true,
   });
@@ -30,6 +31,10 @@ const Header = () => {
       height: "430px",
     },
   }));
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <>
@@ -50,8 +55,7 @@ const Header = () => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-              gap: { xs: 3, md: 6 },
-              mt: 4,
+              gap: { xs: 2, md: 6 },
             }}
           >
             <Typography variant="h4" textAlign="center" fontWeight="bolder">
@@ -111,11 +115,13 @@ const Header = () => {
             zIndex: "-1",
           }}
         >
-          <StyledImage
-            src={isDesktop ? headerImage : headerImageMobile}
-            alt="decor"
-            style={{ width: "100%" }}
-          />
+          {isClient && (
+            <StyledImage
+              src={isDesktop ? headerImage : headerImageMobile}
+              alt="decor"
+              style={{ width: "100%" }}
+            />
+          )}
         </Box>
       </Box>
     </>

@@ -59,8 +59,7 @@ const right = () => {
     },
     [theme.breakpoints.down("sm")]: {
       width: "100% !important",
-      height: "300px!important",
-      objectFit: "fill",
+      height: "250px!important",
     },
     width: "100%",
   }));

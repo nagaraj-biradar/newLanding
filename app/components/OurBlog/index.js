@@ -50,7 +50,7 @@ const OurBlog = () => {
               <Image
                 src={isDesktop ? blogImage : blogImageLandscape}
                 alt="blogImage"
-                height={isDesktop ? 550 : 300}
+                height={isDesktop ? 550 : 250}
                 style={{ width: isDesktop ? "" : "100%" }}
               />
             </Box>
