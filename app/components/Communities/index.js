@@ -67,7 +67,7 @@ const index = () => {
                   width: "300px",
                   overflow: "hidden",
                   boxSizing: "content-box",
-                  padding: "14px 0px",
+                  padding: { xs: "4px 8px", sm: "10px", md: "14px" },
                   borderRadius: "20px",
                   gap: 1,
                   position: "absolute",
@@ -79,8 +79,9 @@ const index = () => {
                 <Typography
                   variant="h6"
                   component="div"
-                  letterSpacing={1.2}
-                  px={3}
+                  letterSpacing={{ xs: 1, sm: 1.2 }}
+                  fontSize={{ xs: "20px", sm: "20px", md: "24px" }}
+                  px={{ xs: 1, sm: 3 }}
                 >
                   Lead an event, exchange ideas, or find your next adventure
                   with UMEGO
@@ -107,7 +108,7 @@ const index = () => {
                   width: "300px",
                   overflow: "hidden",
                   boxSizing: "content-box",
-                  padding: "14px 0px",
+                  padding: { xs: "4px 8px", sm: "10px", md: "14px" },
                   borderRadius: "20px",
                   gap: 1,
                   position: "absolute",
@@ -119,8 +120,9 @@ const index = () => {
                 <Typography
                   variant="h6"
                   component="div"
-                  letterSpacing={1.2}
-                  px={3}
+                  letterSpacing={{ xs: 1, sm: 1.2 }}
+                  fontSize={{ xs: "20px", sm: "20px", md: "24px" }}
+                  px={{ xs: 1, sm: 3 }}
                 >
                   Dive into a community that turns hobbies into connections
                 </Typography>

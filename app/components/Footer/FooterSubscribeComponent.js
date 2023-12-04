@@ -5,6 +5,7 @@ import {
   Button,
   IconButton,
   InputAdornment,
+  Stack,
   TextField,
   Typography,
   useMediaQuery,
@@ -79,14 +80,33 @@ const EmailFooter = () => {
               }}
             />
           </StyledLineContainer>
-          {isDesktop && (
-            <StyledEmailFooterTextH6>
-              Sign up for exclusive access to our experiences before they hit
-              our site!
-              <br /> And discount codes? We{"’"}ve got those, too.
-            </StyledEmailFooterTextH6>
-          )}
-          {isDesktop ? (
+          <StyledEmailFooterTextH6>
+            Sign up for exclusive access to our experiences before they hit our
+            site!
+          </StyledEmailFooterTextH6>
+          <Stack alignItems="center" gap={2} mt={2}>
+            <TextField
+              sx={desktopTextStyle}
+              id="email"
+              name="email"
+              type="email"
+              placeholder=""
+              autoComplete="fullName"
+              variant="filled"
+              InputProps={{
+                disableUnderline: true,
+              }}
+            />
+            <Button
+              sx={buttonStyle}
+              color="secondary"
+              variant="contained"
+              type="submit"
+            >
+              Subscribe
+            </Button>
+          </Stack>
+          {/* {isDesktop ? (
             <form>
               <Box sx={StylesEmailAddressContainer}>
                 <TextField
@@ -137,7 +157,7 @@ const EmailFooter = () => {
                 ),
               }}
             />
-          )}
+          )} */}
         </Box>
       </Box>
       <Box mt={{ xs: 4, sm: 7, md: 10 }}>

@@ -3,17 +3,21 @@
 import {
   Box,
   Button,
+  InputLabel,
+  NativeSelect,
   Stack,
   styled,
   TextField,
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import phone from "../../assets/phone.png";
 import icon1 from "../../assets/icon1.png";
+import { countries } from "../../constants/country";
 
 const ContactForm = () => {
+  const [isChecked, setIsChanged] = useState(false);
   const StyledImage = styled(Image)(({ theme }) => ({
     [theme.breakpoints.up("xl")]: {
       height: "500px !important",
@@ -21,6 +25,7 @@ const ContactForm = () => {
     },
     [theme.breakpoints.down("xl")]: {
       height: "480px !important",
+      objectFit: "contain",
     },
     [theme.breakpoints.down("lg")]: {
       height: "430px !important",
@@ -35,6 +40,25 @@ const ContactForm = () => {
     },
     objectFit: "fill",
   }));
+
+  const handleChange = (e) => {
+    setIsChanged(e.target.checked);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!isChecked) alert("Please select the checkbox.");
+    const name = e.target.elements.name.value;
+    const emailAddress = e.target.elements.emailAddress.value;
+    const country = e.target.elements.country.value;
+    if (!name) alert("Name is required.");
+    if (!emailAddress) alert("Email is required.");
+    if (!country) alert("Country is required.");
+
+    //make a newtwork request here
+    console.log({ name, emailAddress, country });
+  };
+
   return (
     <>
       <Stack
@@ -70,103 +94,121 @@ const ContactForm = () => {
             pb: { xs: 10, md: 10, lg: 10 },
           }}
         >
-          <Stack sx={{ gap: 3, width: "100%", px: { xs: 2, md: 0 } }}>
-            <Box>
-              <Typography variant="body2" fontWeight="bold">
-                ENTER YOUR EMAIL FOR A CHANCE TO WIN AN
-              </Typography>
-              <Typography
-                variant="h3"
-                color="#4548E8"
-                fontWeight={"bold"}
-                sx={{ mt: 0.5 }}
-              >
-                iPhone 15 for free
-              </Typography>
-            </Box>
-            <Stack sx={{ gap: 4, mt: 1 }}>
-              <TextField
-                id="standard-number"
-                label={
-                  <Typography
-                    variant="body1"
-                    fontWeight="bold"
-                    color="black"
-                    sx={{ fontSize: "18px" }}
+          <form style={{ width: "100%" }} onSubmit={handleSubmit}>
+            <Stack sx={{ gap: 3, width: "100%", px: { xs: 2, md: 0 } }}>
+              <Box>
+                <Typography variant="body2" fontWeight="bold">
+                  ENTER YOUR EMAIL FOR A CHANCE TO WIN AN
+                </Typography>
+                <Typography
+                  variant="h3"
+                  color="#4548E8"
+                  fontWeight={"bold"}
+                  sx={{ mt: 0.5 }}
+                >
+                  iPhone 15 for free
+                </Typography>
+              </Box>
+              <Stack sx={{ gap: 4, mt: 1 }}>
+                <TextField
+                  id="standard-number"
+                  name="name"
+                  label={
+                    <Typography
+                      variant="body1"
+                      fontWeight="bold"
+                      color="black"
+                      sx={{ fontSize: "18px" }}
+                    >
+                      Name
+                    </Typography>
+                  }
+                  type="text"
+                  fullWidth
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                  variant="standard"
+                />
+                <TextField
+                  id="standard-number"
+                  name="emailAddress"
+                  label={
+                    <Typography
+                      variant="body1"
+                      fontWeight="bold"
+                      color="black"
+                      sx={{ fontSize: "18px" }}
+                    >
+                      Email address *
+                    </Typography>
+                  }
+                  fullWidth
+                  type="text"
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                  variant="standard"
+                />
+                <Box>
+                  <InputLabel shrink htmlFor="standard-number">
+                    <Typography
+                      variant="body1"
+                      fontWeight="bold"
+                      color="black"
+                      sx={{ fontSize: "18px" }}
+                    >
+                      Country *
+                    </Typography>
+                  </InputLabel>
+                  <NativeSelect
+                    name="country"
+                    id="standard-number"
+                    defaultValue="Singapore"
+                    fullWidth
+                    type="text"
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    variant="standard"
                   >
-                    Name
-                  </Typography>
-                }
-                type="text"
-                fullWidth
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                variant="standard"
-              />
-              <TextField
-                id="standard-number"
-                label={
-                  <Typography
-                    variant="body1"
-                    fontWeight="bold"
-                    color="black"
-                    sx={{ fontSize: "18px" }}
-                  >
-                    Email address *
-                  </Typography>
-                }
-                fullWidth
-                type="text"
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                variant="standard"
-              />
+                    {countries.map((country) => (
+                      <option value={country} key={country}>
+                        {country}
+                      </option>
+                    ))}
+                  </NativeSelect>
+                </Box>
+              </Stack>
 
-              <TextField
-                id="standard-number"
-                label={
-                  <Typography
-                    variant="body1"
-                    fontWeight="bold"
-                    color="black"
-                    sx={{ fontSize: "18px" }}
-                  >
-                    Country *
-                  </Typography>
-                }
-                fullWidth
-                type="text"
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                variant="standard"
-              />
-            </Stack>
+              <Box>
+                <input
+                  type="checkbox"
+                  onChange={handleChange}
+                  checked={isChecked}
+                />
+                <Typography component="span">
+                  {"  "}I agree to the contest terms and conditions.
+                </Typography>
+              </Box>
 
-            <Box>
-              <input type="checkbox" />
-              <Typography component="span">
-                {"  "}I agree to the contest terms and conditions.
-              </Typography>
-            </Box>
-
-            <Box>
-              <Button
-                sx={{
-                  background: "#4245E4",
-                  color: "white",
-                  padding: "7px 20px",
-                  ":hover": {
+              <Box>
+                <Button
+                  sx={{
                     background: "#4245E4",
-                  },
-                }}
-              >
-                Submit -{">"}
-              </Button>
-            </Box>
-          </Stack>
+                    color: "white",
+                    padding: "7px 20px",
+                    ":hover": {
+                      background: "#4245E4",
+                    },
+                  }}
+                  type="submit"
+                >
+                  Submit -{">"}
+                </Button>
+              </Box>
+            </Stack>
+          </form>
         </Box>
         <Box
           flex={1}

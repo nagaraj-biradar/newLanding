@@ -21,15 +21,19 @@ const Header = () => {
   });
 
   const StyledImage = styled(Image)(({ theme }) => ({
-    [theme.breakpoints.up("md")]: {
-      height: "580px",
+    [theme.breakpoints.up("lg")]: {
+      height: "600px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      height: "500px",
     },
     [theme.breakpoints.down("md")]: {
-      height: "380px",
+      height: "400px",
     },
     [theme.breakpoints.down("sm")]: {
       height: "430px",
     },
+    objectFit: "fill",
   }));
 
   useEffect(() => {
@@ -56,17 +60,28 @@ const Header = () => {
               alignItems: "center",
               flexDirection: "column",
               gap: { xs: 2, md: 6 },
+              mt: 1,
             }}
           >
-            <Typography variant="h4" textAlign="center" fontWeight="bolder">
+            <Typography
+              variant="h4"
+              textAlign="center"
+              fontWeight="bolder"
+              className="fontPoppins"
+              sx={{ fontSize: { xs: "30px", sm: "34px" } }}
+            >
               Connecting People via
               <br />
               <Typography
                 component="span"
                 variant="h3"
                 color="#2C90ED"
-                fontWeight="bolder"
+                fontWeight="bold"
                 lineHeight="80px"
+                sx={{
+                  position: "relative",
+                  bottom: { xs: "8px", sm: "0px" },
+                }}
               >
                 Experiences
               </Typography>
@@ -77,8 +92,9 @@ const Header = () => {
             <Box
               sx={{
                 background: "#4548E8",
-                padding: "15px 16px",
+                padding: { xs: "20px", sm: "25px 40px" },
                 borderRadius: "50px",
+                boxSizing: "border-box",
               }}
             >
               <Typography

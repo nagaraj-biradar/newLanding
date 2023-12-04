@@ -5,18 +5,18 @@ const desktopTextStyle = {
     background: "white",
     boxShadow: "0 4px 30px #00000025",
     border: "1px solid rgba(0, 0, 0, 0.20)",
-    borderRadius: "50px",
+    borderRadius: "10px",
     height: "44px",
   },
   "& .MuiFilledInput-root.Mui-focused": {
     background: "white",
-    borderRadius: "50px",
+    borderRadius: "10px",
     border: "1px solid rgba(0, 0, 0, 0.20)",
     height: "44px",
   },
   "& .MuiFilledInput-root:hover": {
     background: "white",
-    borderRadius: "50px",
+    borderRadius: "10px",
     border: "1px solid rgba(0, 0, 0, 0.20)",
     height: "44px",
   },
@@ -32,6 +32,7 @@ const desktopTextStyle = {
     borderRadius: "50px",
     paddingTop: "7px",
   },
+  width: { xs: "300px", sm: "400px", md: "500px" },
 };
 
 const mobileTextStyle = {
@@ -78,6 +79,7 @@ const buttonStyle = {
   background: "#4548E8",
   color: "white",
   height: "44px",
+  width: "200px",
   fontSize: { xl: "17.5px" },
 };
 
