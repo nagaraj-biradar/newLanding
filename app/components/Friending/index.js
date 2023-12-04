@@ -75,7 +75,7 @@ const Frinding = () => {
             <Typography
               variant="h6"
               component="div"
-              letterSpacing={{ sm: 1.2 }}
+              letterSpacing={{ sm: 1.1 }}
               sx={{
                 fontSize: { xs: "12px", sm: "18px", md: "20px" },
               }}
@@ -110,7 +110,7 @@ const Frinding = () => {
             <Typography
               variant="h6"
               component="div"
-              letterSpacing={{ sm: 1.2 }}
+              letterSpacing={{ sm: 1.1 }}
               sx={{
                 fontSize: { xs: "12px", sm: "18px", md: "20px" },
               }}
@@ -145,7 +145,7 @@ const Frinding = () => {
             <Typography
               variant="h6"
               component="div"
-              letterSpacing={{ sm: 1.2 }}
+              letterSpacing={{ sm: 1.1 }}
               sx={{
                 fontSize: { xs: "12px", sm: "18px", md: "20px" },
               }}

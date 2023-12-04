@@ -48,7 +48,7 @@ const index = () => {
               textAlign="center"
               sx={{
                 px: { xs: 0, sm: 6, md: 10 },
-                fontWeight: 540,
+                fontWeight: 550,
                 fontSize: { xs: "24px", md: "34px" },
               }}
             >
