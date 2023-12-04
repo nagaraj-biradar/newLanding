@@ -78,7 +78,6 @@ const Frinding = () => {
               letterSpacing={{ sm: 1.2 }}
               sx={{
                 fontSize: { xs: "12px", sm: "18px", md: "20px" },
-                wordBreak: "break-all",
               }}
             >
               Share your activity plans and invite others to join the fun.
@@ -114,7 +113,6 @@ const Frinding = () => {
               letterSpacing={{ sm: 1.2 }}
               sx={{
                 fontSize: { xs: "12px", sm: "18px", md: "20px" },
-                wordBreak: "break-all",
               }}
             >
               Discover and connect with like-minded people
@@ -150,7 +148,6 @@ const Frinding = () => {
               letterSpacing={{ sm: 1.2 }}
               sx={{
                 fontSize: { xs: "12px", sm: "18px", md: "20px" },
-                wordBreak: "break-all",
               }}
             >
               Spot exciting activities shared by users and jump in!
