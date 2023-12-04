@@ -12,7 +12,6 @@ const OurBlog = () => {
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"), {
     defaultMatches: true,
   });
-  console.log(isDesktop);
 
   return (
     <>

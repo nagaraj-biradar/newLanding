@@ -31,7 +31,6 @@ const EmailFooter = () => {
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
-  console.log(isDesktop);
 
   return (
     <>
