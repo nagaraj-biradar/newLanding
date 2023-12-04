@@ -1,12 +1,24 @@
 "use client";
 
 import React from "react";
-import { Box, styled, Typography } from "@mui/material";
+import {
+  Box,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import logo from "../../assets/logo.png";
 import headerImage from "../../assets/headerImage.png";
+import headerImageMobile from "../../assets/headerImageMobile.png";
 import Image from "next/image";
 
 const Header = () => {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"), {
+    defaultMatches: true,
+  });
+
   const StyledImage = styled(Image)(({ theme }) => ({
     [theme.breakpoints.up("md")]: {
       height: "580px",
@@ -15,7 +27,7 @@ const Header = () => {
       height: "380px",
     },
     [theme.breakpoints.down("sm")]: {
-      height: "320px",
+      height: "430px",
     },
   }));
 
@@ -100,7 +112,7 @@ const Header = () => {
           }}
         >
           <StyledImage
-            src={headerImage}
+            src={isDesktop ? headerImage : headerImageMobile}
             alt="decor"
             style={{ width: "100%" }}
           />
