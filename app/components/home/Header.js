@@ -21,8 +21,11 @@ const Header = () => {
   });
 
   const StyledImage = styled(Image)(({ theme }) => ({
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("xl")]: {
       height: "600px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: "590px",
     },
     [theme.breakpoints.down("lg")]: {
       height: "500px",
@@ -31,7 +34,7 @@ const Header = () => {
       height: "400px",
     },
     [theme.breakpoints.down("sm")]: {
-      height: "430px",
+      height: "400px",
     },
     objectFit: "fill",
   }));
@@ -59,8 +62,7 @@ const Header = () => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-              gap: { xs: 2, md: 6 },
-              mt: 1,
+              gap: { xs: 2, md: 3 },
             }}
           >
             <Typography
@@ -73,6 +75,7 @@ const Header = () => {
               Connecting People via
               <br />
               <Typography
+                className="fontPoppins"
                 component="span"
                 variant="h3"
                 color="#2C90ED"
@@ -92,7 +95,7 @@ const Header = () => {
             <Box
               sx={{
                 background: "#4548E8",
-                padding: { xs: "20px", sm: "25px 40px" },
+                padding: { xs: "20px", sm: "25px 60px" },
                 borderRadius: "50px",
                 boxSizing: "border-box",
               }}

@@ -81,7 +81,7 @@ const index = () => {
                   component="div"
                   letterSpacing={{ xs: 1, sm: 1.2 }}
                   fontSize={{ xs: "20px", sm: "20px", md: "24px" }}
-                  px={{ xs: 1, sm: 3 }}
+                  px={{ xs: 1, sm: 1 }}
                 >
                   Lead an event, exchange ideas, or find your next adventure
                   with UMEGO
@@ -122,7 +122,7 @@ const index = () => {
                   component="div"
                   letterSpacing={{ xs: 1, sm: 1.2 }}
                   fontSize={{ xs: "20px", sm: "20px", md: "24px" }}
-                  px={{ xs: 1, sm: 3 }}
+                  px={{ xs: 1, sm: 1 }}
                 >
                   Dive into a community that turns hobbies into connections
                 </Typography>

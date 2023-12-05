@@ -53,7 +53,7 @@ const EmailFooter = () => {
     <>
       <Box
         my={2}
-        py={{ xs: 1, md: 3 }}
+        py={{ xs: 1, md: 2 }}
         mt={{ xs: 4, sm: 7, md: 14 }}
         sx={{
           position: "relative",
@@ -79,23 +79,23 @@ const EmailFooter = () => {
             >
               No Spam, Just Experiences
             </StyledEmailFooterText>
-            <StyledLineContainer sx={{ marginTop: "10px" }}>
+            {/* <StyledLineContainer sx={{ marginTop: "10px" }}>
               <Box
                 sx={{
                   borderBottom: "2px solid #FFFFFF",
                   width: "150px",
                 }}
               />
-            </StyledLineContainer>
+            </StyledLineContainer> */}
           </Box>
-          <StyledLineContainer sx={{ marginTop: "4px", marginBottom: "10px" }}>
+          {/* <StyledLineContainer sx={{ marginTop: "4px", marginBottom: "10px" }}>
             <Box
               sx={{
                 borderBottom: "2px solid #FFFFFF",
                 width: "75px",
               }}
             />
-          </StyledLineContainer>
+          </StyledLineContainer> */}
           <StyledEmailFooterTextH6>
             Sign up for exclusive access to our experiences before they hit our
             site!
