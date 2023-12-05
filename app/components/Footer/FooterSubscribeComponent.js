@@ -26,12 +26,28 @@ import {
   mobileTextStyle,
 } from "./styles/EmailFooterStyles";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const EmailFooter = () => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
+
+  const [subscribeEmailId, setSubscribeEmailId] = useState("");
+
+  const handleSubscribe = () => {
+    fetch("http://localhost:3001/api/experience_subscriptions/subscription", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ subscribeEmailId }),
+    })
+      .then((response) => response.json(subscribeEmailId))
+      .then((data) => alert("Thanks for subscribing!"));
+  };
 
   return (
     <>
@@ -96,12 +112,14 @@ const EmailFooter = () => {
               InputProps={{
                 disableUnderline: true,
               }}
+              onChange={(e) => setSubscribeEmailId(e.target.value)}
             />
             <Button
               sx={buttonStyle}
               color="secondary"
               variant="contained"
               type="submit"
+              onClick={() => handleSubscribe()}
             >
               Subscribe
             </Button>

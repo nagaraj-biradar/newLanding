@@ -55,8 +55,27 @@ const ContactForm = () => {
     if (!emailAddress) alert("Email is required.");
     if (!country) alert("Country is required.");
 
+    const data = {
+      name,
+      emailAddress,
+      country,
+    };
+
     //make a newtwork request here
-    console.log({ name, emailAddress, country });
+    try {
+      fetch("http://localhost:3001/api/subscriptions/userSubscription", {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => alert("You have successfully submitted."));
+    } catch (error) {
+      alert(`${error.message}`);
+    }
   };
 
   return (
