@@ -50,7 +50,10 @@ const EmailFooter = () => {
       body: JSON.stringify({ subscribeEmailId }),
     })
       .then((response) => response.json(subscribeEmailId))
-      .then((data) => alert("Thanks for subscribing!"));
+      .then((data) => {
+        alert("Thanks for subscribing!");
+        setSubscribeEmailId("");
+      });
   };
 
   return (

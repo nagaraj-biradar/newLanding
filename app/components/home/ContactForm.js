@@ -84,7 +84,12 @@ const ContactForm = () => {
         body: JSON.stringify(data),
       })
         .then((response) => response.json())
-        .then((data) => alert("You have successfully submitted."));
+        .then((data) => {
+          alert("You have successfully submitted.");
+          e.target.elements.name.value = "";
+          e.target.elements.emailAddress.value = "";
+          e.target.elements.country.value = "";
+        });
     } catch (error) {
       alert(`${error.message}`);
     }
