@@ -1,13 +1,23 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Box, styled, Typography } from "@mui/material";
+import React from "react";
+import {
+  Box,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import logo from "../../assets/logo.png";
 import groupFriendsJumpingHill from "../../assets/groupFriendsJumpingHill.png";
+import groupFriendsJumpingHillMobile from "../../assets/groupFriendsJumpingHillMobile.png";
 import Image from "next/image";
 
 const Header = () => {
-  const [isClient, setIsClient] = useState(false);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"), {
+    defaultMatches: true,
+  });
 
   const StyledImage = styled(Image)(({ theme }) => ({
     [theme.breakpoints.up("xl")]: {
@@ -24,13 +34,10 @@ const Header = () => {
     },
     [theme.breakpoints.down("sm")]: {
       height: "400px",
+      objectFit: "cover",
     },
     objectFit: "fill",
   }));
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   return (
     <>
@@ -148,9 +155,13 @@ const Header = () => {
           }}
         >
           <StyledImage
-            src={groupFriendsJumpingHill}
+            src={
+              isDesktop
+                ? groupFriendsJumpingHill
+                : groupFriendsJumpingHillMobile
+            }
             alt="decor"
-            style={{ width: "100%", opacity: "10%" }}
+            style={{ width: "100%", opacity: "20%" }}
           />
         </Box>
       </Box>
