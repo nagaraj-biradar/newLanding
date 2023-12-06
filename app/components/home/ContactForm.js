@@ -47,13 +47,25 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!isChecked) alert("Please select the checkbox.");
+    if (!isChecked) {
+      alert("Please select the checkbox.");
+      return;
+    }
     const name = e.target.elements.name.value;
     const emailAddress = e.target.elements.emailAddress.value;
     const country = e.target.elements.country.value;
-    if (!name) alert("Name is required.");
-    if (!emailAddress) alert("Email is required.");
-    if (!country) alert("Country is required.");
+    if (!name) {
+      alert("Name is required.");
+      return;
+    }
+    if (!emailAddress) {
+      alert("Email is required.");
+      return;
+    }
+    if (!country) {
+      alert("Country is required.");
+      return;
+    }
 
     const data = {
       name,

@@ -37,6 +37,10 @@ const EmailFooter = () => {
   const [subscribeEmailId, setSubscribeEmailId] = useState("");
 
   const handleSubscribe = () => {
+    if (!subscribeEmailId) {
+      alert("Email is required");
+      return;
+    }
     fetch("https://api.umego.io/api/experience_subscriptions/subscription", {
       method: "POST",
 
