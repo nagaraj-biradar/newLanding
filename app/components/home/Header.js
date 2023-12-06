@@ -59,7 +59,7 @@ const Header = () => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-              gap: { xs: 6, md: 8 },
+              gap: { xs: 4, md: 8 },
             }}
           >
             <Box sx={{ position: "relative" }}>
