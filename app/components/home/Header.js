@@ -9,7 +9,7 @@ import {
   useTheme,
 } from "@mui/material";
 import logo from "../../assets/logo.png";
-import headerImage from "../../assets/headerImage.png";
+import headerImage from "../../assets/group-friends-jumping-top-hill 1.png";
 import headerImageMobile from "../../assets/headerImageMobile.png";
 import Image from "next/image";
 
@@ -70,7 +70,7 @@ const Header = () => {
               textAlign="center"
               fontWeight="bolder"
               className="fontPoppins"
-              sx={{ fontSize: { xs: "30px", sm: "34px" } }}
+              sx={{ fontSize: { xs: "30px", sm: "34px" }, color: "white" }}
             >
               Connecting People via
               <br />
@@ -84,21 +84,24 @@ const Header = () => {
                 sx={{
                   position: "relative",
                   bottom: { xs: "8px", sm: "0px" },
+                  color: "white",
                 }}
               >
                 Experiences
               </Typography>
             </Typography>
-            <Typography component="span" color="black" textAlign="center">
+            <Typography component="span" color="white" textAlign="center">
               Enriched by AI Innovation
             </Typography>
             <Box
-              sx={{
-                background: "#4548E8",
-                padding: { xs: "20px", sm: "25px 60px" },
-                borderRadius: "50px",
-                boxSizing: "border-box",
-              }}
+              sx={
+                {
+                  // background: "#4548E8",
+                  // padding: { xs: "20px", sm: "25px 60px" },
+                  // borderRadius: "50px",
+                  // boxSizing: "border-box",
+                }
+              }
             >
               <Typography
                 variant="h5"
@@ -132,13 +135,14 @@ const Header = () => {
             top: 0,
             width: "100%",
             zIndex: "-1",
+            background: "rgba(30, 44, 169, 0.80)",
           }}
         >
           {isClient && (
             <StyledImage
               src={isDesktop ? headerImage : headerImageMobile}
               alt="decor"
-              style={{ width: "100%" }}
+              style={{ width: "100%", opacity: "10%" }}
             />
           )}
         </Box>
