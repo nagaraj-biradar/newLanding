@@ -37,7 +37,7 @@ const EmailFooter = () => {
   const [subscribeEmailId, setSubscribeEmailId] = useState("");
 
   const handleSubscribe = () => {
-    fetch("http://localhost:3001/api/experience_subscriptions/subscription", {
+    fetch("https://api.umego.io/api/experience_subscriptions/subscription", {
       method: "POST",
 
       headers: {
