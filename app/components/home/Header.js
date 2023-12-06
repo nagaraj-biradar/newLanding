@@ -147,13 +147,11 @@ const Header = () => {
             background: "rgba(30, 44, 169, 0.95)",
           }}
         >
-          {isClient && (
-            <StyledImage
-              src={groupFriendsJumpingHill}
-              alt="decor"
-              style={{ width: "100%", opacity: "10%" }}
-            />
-          )}
+          <StyledImage
+            src={groupFriendsJumpingHill}
+            alt="decor"
+            style={{ width: "100%", opacity: "10%" }}
+          />
         </Box>
       </Box>
     </>
