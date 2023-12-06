@@ -85,11 +85,13 @@ const ContactForm = () => {
           width: "100%",
           boxShadow: "1px 1px 30px rgba(0, 0, 0, 0.3)",
           borderRadius: "20px",
-          mt: { xs: 5, sm: 7, md: 18 },
+          mt: { xs: 5, sm: 7 },
           flexDirection: { xs: "column", md: "row" },
           position: "relative",
           px: { xs: 1, sm: 3, md: 6 },
           gap: { sm: 2 },
+          zIndex: 5,
+          backgroundColor: "white",
         }}
       >
         <Box

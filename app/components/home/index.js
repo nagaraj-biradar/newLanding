@@ -12,14 +12,15 @@ import OurBlog from "../../components/OurBlog";
 const index = () => {
   return (
     <>
-      <Box pt={{ xs: 2, sm: 4 }}>
+      {/* <Box pt={{ xs: 2, sm: 4 }}> */}
+      <Box>
         <Container
           maxWidth={"xl"}
           sx={{
             padding: {
               xs: "0px!important",
               sm: "0px!important",
-              md: "0 24px!important",
+              md: "0px!important",
               lg: "0!important",
               xl: "0 25px!important",
             },

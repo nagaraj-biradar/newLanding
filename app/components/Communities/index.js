@@ -79,8 +79,8 @@ const index = () => {
                 <Typography
                   variant="h6"
                   component="div"
-                  letterSpacing={{ xs: 1, sm: 1.2 }}
-                  fontSize={{ xs: "20px", sm: "20px", md: "24px" }}
+                  letterSpacing={{ xs: 1, sm: 1.1 }}
+                  fontSize={{ xs: "18px", sm: "20px", md: "22px" }}
                   px={{ xs: 1, sm: 1 }}
                 >
                   Lead an event, exchange ideas, or find your next adventure
@@ -120,8 +120,8 @@ const index = () => {
                 <Typography
                   variant="h6"
                   component="div"
-                  letterSpacing={{ xs: 1, sm: 1.2 }}
-                  fontSize={{ xs: "20px", sm: "20px", md: "24px" }}
+                  letterSpacing={{ xs: 1, sm: 1.1 }}
+                  fontSize={{ xs: "18px", sm: "20px", md: "22px" }}
                   px={{ xs: 1, sm: 1 }}
                 >
                   Dive into a community that turns hobbies into connections

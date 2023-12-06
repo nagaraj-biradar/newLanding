@@ -1,24 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import {
-  Box,
-  styled,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import logo from "../../assets/logo.png";
-import headerImage from "../../assets/group-friends-jumping-top-hill 1.png";
-import headerImageMobile from "../../assets/headerImageMobile.png";
+import groupFriendsJumpingHill from "../../assets/groupFriendsJumpingHill.png";
 import Image from "next/image";
 
 const Header = () => {
-  const theme = useTheme();
   const [isClient, setIsClient] = useState(false);
-  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"), {
-    defaultMatches: true,
-  });
 
   const StyledImage = styled(Image)(({ theme }) => ({
     [theme.breakpoints.up("xl")]: {
@@ -52,47 +41,63 @@ const Header = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            mt: { xs: 2, sm: 4 },
+            pt: 6,
+            gap: { xs: 4, md: 6 },
           }}
         >
-          <Image src={logo} alt={"logo"} height={90} />
+          <Image src={logo} alt={"logo"} height={50} />
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-              gap: { xs: 2, md: 3 },
+              gap: { xs: 6, md: 8 },
             }}
           >
-            <Typography
-              variant="h4"
-              textAlign="center"
-              fontWeight="bolder"
-              className="fontPoppins"
-              sx={{ fontSize: { xs: "30px", sm: "34px" }, color: "white" }}
-            >
-              Connecting People via
-              <br />
+            <Box sx={{ position: "relative" }}>
               <Typography
+                variant="h5"
+                textAlign="center"
+                fontWeight="bolder"
                 className="fontPoppins"
-                component="span"
-                variant="h3"
-                color="#2C90ED"
-                fontWeight="bold"
-                lineHeight="80px"
                 sx={{
-                  position: "relative",
-                  bottom: { xs: "8px", sm: "0px" },
                   color: "white",
+                  fontSize: { xs: "20px", md: "22px", lg: "24px" },
                 }}
               >
-                Experiences
+                Connecting People via
+                <br />
+                <Typography
+                  className="fontPoppins"
+                  component="span"
+                  variant="h2"
+                  color="#2C90ED"
+                  fontWeight="bold"
+                  lineHeight="80px"
+                  letterSpacing={1.1}
+                  sx={{
+                    position: "relative",
+                    bottom: { xs: "8px", sm: "0px" },
+                    color: "white",
+                    fontSize: { xs: "34px", md: "40px", lg: "60px" },
+                  }}
+                >
+                  Experiences
+                </Typography>
               </Typography>
-            </Typography>
-            <Typography component="span" color="white" textAlign="center">
-              Enriched by AI Innovation
-            </Typography>
+              <Typography
+                component="span"
+                color="white"
+                sx={{
+                  position: "absolute",
+                  right: "0",
+                  bottom: { xs: "3px", sm: "-4px", md: "-7px", lg: "-14px" },
+                }}
+              >
+                Enriched by AI Innovation
+              </Typography>
+            </Box>
             <Box
               sx={
                 {
@@ -106,10 +111,12 @@ const Header = () => {
               <Typography
                 variant="h5"
                 sx={{
-                  fontWeight: "550",
+                  fontWeight: "bold",
                   color: "white",
                   textAlign: "center",
+                  fontSize: { xs: "20px", md: "22px", lg: "24px" },
                 }}
+                className="fontPoppins"
               >
                 Launching in January 2024{" "}
               </Typography>
@@ -118,8 +125,10 @@ const Header = () => {
                 sx={{
                   color: "white",
                   textAlign: "center",
+                  fontWeight: "bold",
                   mt: 0.5,
                 }}
+                className="fontPoppins"
               >
                 UAE - Singapore - India - Australia
               </Typography>
@@ -134,13 +143,13 @@ const Header = () => {
             transform: "translate(-50%,0)",
             top: 0,
             width: "100%",
-            zIndex: "-1",
-            background: "rgba(30, 44, 169, 0.80)",
+            zIndex: -1,
+            background: "rgba(30, 44, 169, 0.95)",
           }}
         >
           {isClient && (
             <StyledImage
-              src={isDesktop ? headerImage : headerImageMobile}
+              src={groupFriendsJumpingHill}
               alt="decor"
               style={{ width: "100%", opacity: "10%" }}
             />
