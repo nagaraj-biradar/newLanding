@@ -63,7 +63,7 @@ const ContactForm = () => {
 
     //make a newtwork request here
     try {
-      fetch("http://localhost:3001/api/subscriptions/userSubscription", {
+      fetch("https://api.umego.io/api/subscriptions/userSubscription", {
         method: "POST",
 
         headers: {
