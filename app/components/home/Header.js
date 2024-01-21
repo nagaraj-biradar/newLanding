@@ -125,7 +125,7 @@ const Header = () => {
                 }}
                 className="fontPoppins"
               >
-                Launching in January 2024{" "}
+                Launching in February 2024{" "}
               </Typography>
               <Typography
                 variant="body1"
