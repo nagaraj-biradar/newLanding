@@ -125,7 +125,7 @@ const Header = () => {
                 }}
                 className="fontPoppins"
               >
-                Launching in April 2024{" "}
+                Launching in August 2024{" "}
               </Typography>
               <Typography
                 variant="body1"
@@ -137,7 +137,7 @@ const Header = () => {
                 }}
                 className="fontPoppins"
               >
-                UAE - Singapore - India - Australia
+                Singapore
               </Typography>
             </Box>
           </Box>
